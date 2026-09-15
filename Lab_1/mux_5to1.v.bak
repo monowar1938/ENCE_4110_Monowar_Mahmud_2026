@@ -1,0 +1,37 @@
+module mux_5to1(S0, S1, S2, U, V, W, X, Y, M);
+	input 	S0, S1, S2, U, V, W, X, Y;
+	output	M;
+	
+	wire	t0;
+	wire	t1;
+	wire	t2;
+	
+	mux_2_1 MUX0(
+		.s(S0),
+		.x(U),
+		.y(V),
+		.m(t0)
+	);
+	
+	mux_2_1 MUX1(
+		.s(S0),
+		.x(W),
+		.y(X),
+		.m(t1)
+	);
+	
+	mux_2_1 MUX2(
+		.s(S1),
+		.x(t0),
+		.y(t1),
+		.m(t2)
+	);
+	
+	mux_2_1 MUX3(
+		.s(S2),
+		.x(t2),
+		.y(Y),
+		.m(M)
+	);
+		
+endmodule

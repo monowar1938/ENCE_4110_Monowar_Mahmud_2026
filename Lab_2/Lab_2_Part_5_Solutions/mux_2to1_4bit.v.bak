@@ -1,0 +1,26 @@
+// 4-Bit 2-to-1 Multiplexer Module
+module mux_2to1_4bit(
+    input  s,     // Single-bit select line
+    input  [3:0] x,     // 4-bit input X (selected when s = 0)
+    input  [3:0] y,     // 4-bit input Y (selected when s = 1)
+    output [3:0] m      // 4-bit output vector
+);
+
+    // Instantiate four 1-bit 2-to-1 MUX primitives
+    mux_2_1 MUX0 (
+        .s(s), .x(x[0]), .y(y[0]), .m(m[0])
+    );
+
+    mux_2_1 MUX1 (
+        .s(s), .x(x[1]), .y(y[1]), .m(m[1])
+    );
+
+    mux_2_1 MUX2 (
+        .s(s), .x(x[2]), .y(y[2]), .m(m[2])
+    );
+
+    mux_2_1 MUX3 (
+        .s(s), .x(x[3]), .y(y[3]), .m(m[3])
+    );
+
+endmodule

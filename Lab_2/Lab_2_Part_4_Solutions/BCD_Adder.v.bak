@@ -1,0 +1,45 @@
+module BCD_Adder(
+    input  [9:0] A, cin
+    output [9:0] B
+);
+
+    wire [3:0] raw_sum;
+    wire       k;
+    wire       comp_z;
+    wire [3:0] correction_vector;
+    wire [3:0] corrected_sum;
+    wire       dummy_cout;
+
+    // 1. Stage 1 Binary Adder: Calculates A + B + cin
+    full_adder_4bit FA_STAGE1 (
+        .A(A[3:0]),
+        .B(B[3:0]),
+        .cin(cin),
+        .S(raw_sum),
+        .cout(k)
+    );
+
+    // 2. Comparator Block: Checks if raw_sum > 9
+    my_comparator COMP_INST (
+        .V(raw_sum), .k(k),
+        .z(comp_z)
+    );
+
+    // 3. 2-to-1 Multiplexer
+    mux_2to1_4bit MUX_INST (
+        .s(comp_z),
+        .x(4'b0000),          
+        .y(4'b0110),          
+        .m(correction_vector)
+    );
+
+    // 4. Stage 2 Binary Adder
+    full_adder_4bit FA_STAGE2 (
+        .A(raw_sum),
+        .B(correction_vector),
+        .cin(1'b0),
+        .S(corrected_sum),
+        .cout(dummy_cout)
+    );   
+
+endmodule

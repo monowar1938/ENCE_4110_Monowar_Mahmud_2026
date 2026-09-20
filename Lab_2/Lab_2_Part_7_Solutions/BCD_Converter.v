@@ -1,0 +1,81 @@
+module BCD_Converter(
+    input  v5,
+    input  v4,
+    input  v3,
+    input  v2,
+    input  v1,
+    input  v0,
+
+    output d13,
+    output d12,
+    output d11,
+    output d10,
+
+    output d03,
+    output d02,
+    output d01,
+    output d00
+);
+
+    wire m1y3, m1y2, m1y1, m1y0;
+
+    wire m2y3, m2y2, m2y1, m2y0;
+
+    wire m3y3, m3y2, m3y1, m3y0;
+
+
+    // Add1
+    add_3 Add1 (
+        .x3(1'b0),
+        .x2(v5),
+        .x1(v4),
+        .x0(v3),
+
+        .y3(m1y3),
+        .y2(m1y2),
+        .y1(m1y1),
+        .y0(m1y0)
+    );
+
+
+    // Add2
+    add_3 Add2 (
+        .x3(m1y2),
+        .x2(m1y1),
+        .x1(m1y0),
+        .x0(v2),
+
+        .y3(m2y3),
+        .y2(m2y2),
+        .y1(m2y1),
+        .y0(m2y0)
+    );
+
+
+    // Add3
+    add_3 Add3 (
+        .x3(m2y2),
+        .x2(m2y1),
+        .x1(m2y0),
+        .x0(v1),
+
+        .y3(m3y3),
+        .y2(m3y2),
+        .y1(m3y1),
+        .y0(m3y0)
+    );
+
+    // Tens BCD digit
+    assign d13 = 1'b0;
+    assign d12 = m1y3;
+    assign d11 = m2y3;
+    assign d10 = m3y3;
+
+
+    // Ones BCD digit
+    assign d03 = m3y2;
+    assign d02 = m3y1;
+    assign d01 = m3y0;
+    assign d00 = v0;
+
+endmodule

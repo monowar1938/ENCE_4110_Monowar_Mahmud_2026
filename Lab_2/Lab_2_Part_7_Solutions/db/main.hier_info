@@ -1,0 +1,187 @@
+|main
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+HEX0[0] <= Seg7_Decoder:D0.out
+HEX0[1] <= Seg7_Decoder:D0.out
+HEX0[2] <= Seg7_Decoder:D0.out
+HEX0[3] <= Seg7_Decoder:D0.out
+HEX0[4] <= Seg7_Decoder:D0.out
+HEX0[5] <= Seg7_Decoder:D0.out
+HEX0[6] <= Seg7_Decoder:D0.out
+HEX0[7] <= Seg7_Decoder:D0.out
+HEX1[0] <= Seg7_Decoder:D1.out
+HEX1[1] <= Seg7_Decoder:D1.out
+HEX1[2] <= Seg7_Decoder:D1.out
+HEX1[3] <= Seg7_Decoder:D1.out
+HEX1[4] <= Seg7_Decoder:D1.out
+HEX1[5] <= Seg7_Decoder:D1.out
+HEX1[6] <= Seg7_Decoder:D1.out
+HEX1[7] <= Seg7_Decoder:D1.out
+
+
+|main|BCD_Converter:BCD0
+v5 => v5.IN1
+v4 => v4.IN1
+v3 => v3.IN1
+v2 => v2.IN1
+v1 => v1.IN1
+v0 => d00.DATAIN
+d13 <= <GND>
+d12 <= add_3:Add1.y3
+d11 <= add_3:Add2.y3
+d10 <= add_3:Add3.y3
+d03 <= add_3:Add3.y2
+d02 <= add_3:Add3.y1
+d01 <= add_3:Add3.y0
+d00 <= v0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|BCD_Converter:BCD0|add_3:Add1
+x3 => y3.IN1
+x3 => y2.IN0
+x3 => y0.IN0
+x2 => y3.IN0
+x2 => y3.IN0
+x2 => y2.IN0
+x2 => y1.IN0
+x2 => y0.IN1
+x1 => y3.IN1
+x1 => y1.IN1
+x1 => y1.IN0
+x1 => y2.IN1
+x0 => y3.IN1
+x0 => y1.IN1
+x0 => y0.IN1
+x0 => y2.IN1
+x0 => y2.IN1
+x0 => y0.IN1
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|BCD_Converter:BCD0|add_3:Add2
+x3 => y3.IN1
+x3 => y2.IN0
+x3 => y0.IN0
+x2 => y3.IN0
+x2 => y3.IN0
+x2 => y2.IN0
+x2 => y1.IN0
+x2 => y0.IN1
+x1 => y3.IN1
+x1 => y1.IN1
+x1 => y1.IN0
+x1 => y2.IN1
+x0 => y3.IN1
+x0 => y1.IN1
+x0 => y0.IN1
+x0 => y2.IN1
+x0 => y2.IN1
+x0 => y0.IN1
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|BCD_Converter:BCD0|add_3:Add3
+x3 => y3.IN1
+x3 => y2.IN0
+x3 => y0.IN0
+x2 => y3.IN0
+x2 => y3.IN0
+x2 => y2.IN0
+x2 => y1.IN0
+x2 => y0.IN1
+x1 => y3.IN1
+x1 => y1.IN1
+x1 => y1.IN0
+x1 => y2.IN1
+x0 => y3.IN1
+x0 => y1.IN1
+x0 => y0.IN1
+x0 => y2.IN1
+x0 => y2.IN1
+x0 => y0.IN1
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Seg7_Decoder:D1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[1] => out.IN0
+m[1] => out.IN0
+m[1] => out.IN1
+m[1] => out.IN0
+m[2] => out.IN1
+m[2] => out.IN1
+m[2] => out.IN0
+m[2] => out.IN1
+m[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= <VCC>
+
+
+|main|Seg7_Decoder:D0
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[0] => out.IN1
+m[1] => out.IN0
+m[1] => out.IN0
+m[1] => out.IN1
+m[1] => out.IN0
+m[2] => out.IN1
+m[2] => out.IN1
+m[2] => out.IN0
+m[2] => out.IN1
+m[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= <VCC>
+
+

@@ -1,0 +1,48 @@
+module mux_5to1_3bit(
+	input 	[2:0] S,
+	input		[2:0]	U,
+	input		[2:0]	V,
+	input		[2:0]	W,
+	input		[2:0]	X,
+	input		[2:0]	Y,
+	output	[2:0]	M
+);
+	
+	mux_5to1 MUX0(
+		.S0(S[0]), 
+		.S1(S[1]), 
+		.S2(S[2]), 
+		.U(U[0]), 
+		.V(V[0]), 
+		.W(W[0]), 
+		.X(X[0]), 
+		.Y(Y[0]),
+		.M(M[0])
+	);
+	
+	mux_5to1 MUX1(
+		.S0(S[0]), 
+		.S1(S[1]), 
+		.S2(S[2]), 
+		.U(U[1]), 
+		.V(V[1]), 
+		.W(W[1]), 
+		.X(X[1]), 
+		.Y(Y[1]),
+		.M(M[1])
+	);
+	
+	mux_5to1 MUX2(
+		.S0(S[0]), 
+		.S1(S[1]), 
+		.S2(S[2]), 
+		.U(U[2]), 
+		.V(V[2]), 
+		.W(W[2]), 
+		.X(X[2]), 
+		.Y(Y[2]),
+		.M(M[2])
+	);
+	
+	
+endmodule

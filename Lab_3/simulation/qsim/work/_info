@@ -1,0 +1,98 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/simulation/qsim
+T_opt
+!i145 1
+!i144 0
+!s110 1790480721
+VZk1R;PMePO7i=OSX>h^TD3
+04 16 4 work main_vlg_vec_tst fast 0
+=1-04ecd84b5a2d-6ab89150-357-5a94
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U3 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver
+tCvgOpt 0 defaultOptions 1107585188
+n@_opt
+OL;O;2025.2;82
+vhard_block
+Z2 2main.vo
+Z3 !s110 1790480720
+!i10b 1
+!s100 PQ:g^HK1KnfJLXKghRBcU0
+I;Z357?b;A[bG;L`J`CNI]1
+R1
+Z4 w1790480719
+Z5 8main.vo
+Z6 Fmain.vo
+!i122 2
+L0 358 45
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z9 !s108 1790480720.000000
+Z10 !s107 main.vo|
+Z11 !s90 -work|work|main.vo|
+!i113 0
+Z12 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z13 tCvgOpt 0 defaultOptions 1085333592
+vmain
+R2
+R3
+!i10b 1
+!s100 ehTVAnDmX26_WkZ?i2l:^0
+I7<S0K]Z[l4A`eN>DP5g=Y0
+R1
+R4
+R5
+R6
+!i122 2
+L0 32 325
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+vmain_vlg_vec_tst
+2Waveform.vwf.vt
+R3
+!i10b 1
+!s100 hm?_gWLbNCzkDMPc:DUQP3
+IGZmo_6SGR:`:EEG5M6L`21
+R1
+w1790480718
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 3
+L0 30 49
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 0
+R12
+R13

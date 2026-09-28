@@ -1,0 +1,614 @@
+Determining the location of the ModelSim executable...
+
+Using: c:/altera_lite/25.1std/questa_fse/win64/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both Questa Intel FPGA Edition and ModelSim executables are available, Questa Intel FPGA Edition will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off main -c main --vector_source="D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/Waveform.vwf" --testbench_file="D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/simulation/qsim/Waveform.vwf.vt"
+
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Copyright (C) 2025  Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Altera and sold by Altera or its authorized distributors.  Please
+    Info: refer to the Altera Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Sat Sep 26 21:45:18 2026
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off main -c main --vector_source=D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/Waveform.vwf --testbench_file=D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/simulation/qsim/Waveform.vwf.vt
+Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[10] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[11] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[12] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[13] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[14] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[15] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_RESET_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_LDQM -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_UDQM -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[10] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[11] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[12] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[13] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[14] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[15] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[16] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[17] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[18] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[19] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[20] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[21] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[22] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[23] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[24] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[25] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[26] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[27] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[28] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[29] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[30] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[31] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[32] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[33] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[34] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[35] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_CS_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SCLK -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDI -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDO -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK1_50 -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK2_50 -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/simulation/qsim/" main -c main
+
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Copyright (C) 2025  Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Altera and sold by Altera or its authorized distributors.  Please
+    Info: refer to the Altera Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Sat Sep 26 21:45:18 2026
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/simulation/qsim/ main -c main
+Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[10] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[11] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[12] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[13] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[14] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[15] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_RESET_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_LDQM -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_UDQM -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[10] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[11] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[12] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[13] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[14] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[15] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[16] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[17] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[18] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[19] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -t
+o GPIO[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[20] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[21] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[22] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[23] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[24] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[25] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[26] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[27] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[28] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[29] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[30] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[31] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[32] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[33] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[34] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[35] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_CS_N -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SCLK -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDI -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDO -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK1_50 -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK2_50 -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3] -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE10_LITE_Golden_Top was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assi
+gnment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file main.vo in folder "D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 211 warnings
+    Info: Peak virtual memory: 4676 megabytes
+    Info: Processing ended: Sat Sep 26 21:45:19 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/simulation/qsim/main.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+c:/altera_lite/25.1std/questa_fse/win64//vsim -c -do main.do
+
+Reading pref.tcl
+
+
+# 2025.2
+
+
+# do main.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 21:45:20 on Sep 26,2026
+# vlog -work work main.vo 
+# ** Note: (vlog-220) 'c:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+
+# -- Compiling module main
+
+# -- Compiling module hard_block
+
+# 
+
+# Top level modules:
+# 	main
+# End time: 21:45:20 on Sep 26,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+
+# Start time: 21:45:20 on Sep 26,2026
+# vlog -work work Waveform.vwf.vt 
+# ** Note: (vlog-220) 'c:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+
+# -- Compiling module main_vlg_vec_tst
+
+# 
+# Top level modules:
+# 	main_vlg_vec_tst
+
+# End time: 21:45:20 on Sep 26,2026, Elapsed time: 0:00:00
+
+# Errors: 0, Warnings: 0
+
+# ** Note: (vsim-220) 'c:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.main_vlg_vec_tst 
+# Start time: 21:45:20 on Sep 26,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-220) 'c:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# ** Warning: main.vo(305): (vopt-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC1~ '.  Expected 8, found 7.
+# ** Warning: main.vo(305): (vopt-2718) [TFMPC] - Missing connection for port 'clk_dft'.
+# ** Warning: main.vo(328): (vopt-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC2~ '.  Expected 8, found 7.
+# ** Warning: main.vo(328): (vopt-2718) [TFMPC] - Missing connection for port 'clk_dft'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+
+# Loading work.main_vlg_vec_tst(fast)
+
+# ** UI-Msg (Error) (suppressible): (vsim-3561) No objects found matching '*'.
+
+# after#31
+
+# ** Note: $finish    : Waveform.vwf.vt(51)
+#    Time: 1 us  Iteration: 0  Instance: /main_vlg_vec_tst
+
+# End time: 21:45:22 on Sep 26,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 4
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/Waveform.vwf...
+
+Reading D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/simulation/qsim/main.msim.vcd...
+
+Processing channel transitions... 
+
+Warning: Clock - signal not found in VCD.
+
+Warning: D - signal not found in VCD.
+
+Warning: Qa - signal not found in VCD.
+
+Warning: Qb - signal not found in VCD.
+
+Warning: Qc - signal not found in VCD.
+
+Writing the resulting VWF to D:/Study/PhD/Q1/ENCE4110/Lab/Quartus/Lab_3_Solutions/simulation/qsim/main_20260926214522.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

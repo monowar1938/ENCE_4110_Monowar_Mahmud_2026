@@ -1,0 +1,119 @@
+|main
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+KEY[0] => A[0].ACLR
+KEY[0] => A[1].ACLR
+KEY[0] => A[2].ACLR
+KEY[0] => A[3].ACLR
+KEY[0] => A[4].ACLR
+KEY[0] => A[5].ACLR
+KEY[0] => A[6].ACLR
+KEY[0] => A[7].ACLR
+KEY[1] => A[0].CLK
+KEY[1] => A[1].CLK
+KEY[1] => A[2].CLK
+KEY[1] => A[3].CLK
+KEY[1] => A[4].CLK
+KEY[1] => A[5].CLK
+KEY[1] => A[6].CLK
+KEY[1] => A[7].CLK
+HEX0[0] <= seg7_display:display_B_low.seg_display
+HEX0[1] <= seg7_display:display_B_low.seg_display
+HEX0[2] <= seg7_display:display_B_low.seg_display
+HEX0[3] <= seg7_display:display_B_low.seg_display
+HEX0[4] <= seg7_display:display_B_low.seg_display
+HEX0[5] <= seg7_display:display_B_low.seg_display
+HEX0[6] <= seg7_display:display_B_low.seg_display
+HEX0[7] <= seg7_display:display_B_low.seg_display
+HEX1[0] <= seg7_display:display_B_high.seg_display
+HEX1[1] <= seg7_display:display_B_high.seg_display
+HEX1[2] <= seg7_display:display_B_high.seg_display
+HEX1[3] <= seg7_display:display_B_high.seg_display
+HEX1[4] <= seg7_display:display_B_high.seg_display
+HEX1[5] <= seg7_display:display_B_high.seg_display
+HEX1[6] <= seg7_display:display_B_high.seg_display
+HEX1[7] <= seg7_display:display_B_high.seg_display
+HEX2[0] <= seg7_display:display_A_low.seg_display
+HEX2[1] <= seg7_display:display_A_low.seg_display
+HEX2[2] <= seg7_display:display_A_low.seg_display
+HEX2[3] <= seg7_display:display_A_low.seg_display
+HEX2[4] <= seg7_display:display_A_low.seg_display
+HEX2[5] <= seg7_display:display_A_low.seg_display
+HEX2[6] <= seg7_display:display_A_low.seg_display
+HEX2[7] <= seg7_display:display_A_low.seg_display
+HEX3[0] <= seg7_display:display_A_high.seg_display
+HEX3[1] <= seg7_display:display_A_high.seg_display
+HEX3[2] <= seg7_display:display_A_high.seg_display
+HEX3[3] <= seg7_display:display_A_high.seg_display
+HEX3[4] <= seg7_display:display_A_high.seg_display
+HEX3[5] <= seg7_display:display_A_high.seg_display
+HEX3[6] <= seg7_display:display_A_high.seg_display
+HEX3[7] <= seg7_display:display_A_high.seg_display
+
+
+|main|seg7_display:display_A_high
+bin_number[0] => Decoder0.IN3
+bin_number[1] => Decoder0.IN2
+bin_number[2] => Decoder0.IN1
+bin_number[3] => Decoder0.IN0
+seg_display[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+
+|main|seg7_display:display_A_low
+bin_number[0] => Decoder0.IN3
+bin_number[1] => Decoder0.IN2
+bin_number[2] => Decoder0.IN1
+bin_number[3] => Decoder0.IN0
+seg_display[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+
+|main|seg7_display:display_B_high
+bin_number[0] => Decoder0.IN3
+bin_number[1] => Decoder0.IN2
+bin_number[2] => Decoder0.IN1
+bin_number[3] => Decoder0.IN0
+seg_display[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+
+|main|seg7_display:display_B_low
+bin_number[0] => Decoder0.IN3
+bin_number[1] => Decoder0.IN2
+bin_number[2] => Decoder0.IN1
+bin_number[3] => Decoder0.IN0
+seg_display[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+

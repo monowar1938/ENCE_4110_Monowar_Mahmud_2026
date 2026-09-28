@@ -1,0 +1,26 @@
+$comment
+	File created using the following command:
+		vcd file main.msim.vcd -direction
+$end
+$date
+	Sat Sep 26 21:45:22 2026
+$end
+$version
+	Questa Altera Starter FPGA Edition Version 2025.2
+$end
+$timescale
+	1ps
+$end
+
+$scope module main_vlg_vec_tst $end
+
+$scope module i1 $end
+$var tri1 1 ! devoe $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+$end
+#1000000

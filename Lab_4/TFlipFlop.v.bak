@@ -1,0 +1,3 @@
+module TFlipFlop(
+	input Enable, T
+);

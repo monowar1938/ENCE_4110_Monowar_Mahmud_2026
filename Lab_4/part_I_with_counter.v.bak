@@ -1,0 +1,28 @@
+module part_I_with_counter(
+    input        MAX10_CLK1_50,   // Built-in 50 MHz clock
+    input  [9:0] SW,
+    output [9:0] LEDR
+);
+
+    reg [24:0] clk_count = 0;
+    reg slow_clk = 0;
+	 
+    // Clock divider: 50 MHz --> 1 Hz
+    always @(posedge MAX10_CLK1_50) begin
+        if (clk_count == 25_000_000 - 1) begin
+            clk_count <= 0;
+            slow_clk <= ~slow_clk;
+        end
+        else begin
+            clk_count <= clk_count + 1'b1;
+        end
+    end
+
+    Counter_8bit counter1(
+        .ena   (SW[0]),
+        .clk   (slow_clk),
+        .clear (SW[9]),
+        .count (LEDR[7:0])
+    );
+
+endmodule

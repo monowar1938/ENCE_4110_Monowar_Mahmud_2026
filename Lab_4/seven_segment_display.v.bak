@@ -1,0 +1,20 @@
+module seg7_display(
+    input      [3:0] character,
+    output reg [7:0] seg_display
+);
+
+always @(*) begin
+    case(character)
+
+        4'b0000: seg_display = 8'b11111111; // Blank
+        4'b0001: seg_display = 8'b10001001; // H
+        4'b0010: seg_display = 8'b10000110; // E
+        4'b0011: seg_display = 8'b11000111; // L
+        4'b0100: seg_display = 8'b11000000; // O
+
+        default: seg_display = 8'b11111111; // Blank
+
+    endcase
+end
+
+endmodule

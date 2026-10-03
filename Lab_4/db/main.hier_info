@@ -1,0 +1,260 @@
+|main
+MAX10_CLK1_50 => MAX10_CLK1_50.IN2
+SW[0] => comb.IN1
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => clear.IN2
+HEX0[0] << seven_segment_display:display0.seg_display
+HEX0[1] << seven_segment_display:display0.seg_display
+HEX0[2] << seven_segment_display:display0.seg_display
+HEX0[3] << seven_segment_display:display0.seg_display
+HEX0[4] << seven_segment_display:display0.seg_display
+HEX0[5] << seven_segment_display:display0.seg_display
+HEX0[6] << seven_segment_display:display0.seg_display
+HEX0[7] << seven_segment_display:display0.seg_display
+HEX1[0] << seven_segment_display:display1.seg_display
+HEX1[1] << seven_segment_display:display1.seg_display
+HEX1[2] << seven_segment_display:display1.seg_display
+HEX1[3] << seven_segment_display:display1.seg_display
+HEX1[4] << seven_segment_display:display1.seg_display
+HEX1[5] << seven_segment_display:display1.seg_display
+HEX1[6] << seven_segment_display:display1.seg_display
+HEX1[7] << seven_segment_display:display1.seg_display
+HEX2[0] << seven_segment_display:display2.seg_display
+HEX2[1] << seven_segment_display:display2.seg_display
+HEX2[2] << seven_segment_display:display2.seg_display
+HEX2[3] << seven_segment_display:display2.seg_display
+HEX2[4] << seven_segment_display:display2.seg_display
+HEX2[5] << seven_segment_display:display2.seg_display
+HEX2[6] << seven_segment_display:display2.seg_display
+HEX2[7] << seven_segment_display:display2.seg_display
+HEX3[0] << seven_segment_display:display3.seg_display
+HEX3[1] << seven_segment_display:display3.seg_display
+HEX3[2] << seven_segment_display:display3.seg_display
+HEX3[3] << seven_segment_display:display3.seg_display
+HEX3[4] << seven_segment_display:display3.seg_display
+HEX3[5] << seven_segment_display:display3.seg_display
+HEX3[6] << seven_segment_display:display3.seg_display
+HEX3[7] << seven_segment_display:display3.seg_display
+HEX4[0] << seven_segment_display:display4.seg_display
+HEX4[1] << seven_segment_display:display4.seg_display
+HEX4[2] << seven_segment_display:display4.seg_display
+HEX4[3] << seven_segment_display:display4.seg_display
+HEX4[4] << seven_segment_display:display4.seg_display
+HEX4[5] << seven_segment_display:display4.seg_display
+HEX4[6] << seven_segment_display:display4.seg_display
+HEX4[7] << seven_segment_display:display4.seg_display
+HEX5[0] << seven_segment_display:display5.seg_display
+HEX5[1] << seven_segment_display:display5.seg_display
+HEX5[2] << seven_segment_display:display5.seg_display
+HEX5[3] << seven_segment_display:display5.seg_display
+HEX5[4] << seven_segment_display:display5.seg_display
+HEX5[5] << seven_segment_display:display5.seg_display
+HEX5[6] << seven_segment_display:display5.seg_display
+HEX5[7] << seven_segment_display:display5.seg_display
+
+
+|main|Counter_1Hz:clock1
+in_clk => clk_count[0].CLK
+in_clk => clk_count[1].CLK
+in_clk => clk_count[2].CLK
+in_clk => clk_count[3].CLK
+in_clk => clk_count[4].CLK
+in_clk => clk_count[5].CLK
+in_clk => clk_count[6].CLK
+in_clk => clk_count[7].CLK
+in_clk => clk_count[8].CLK
+in_clk => clk_count[9].CLK
+in_clk => clk_count[10].CLK
+in_clk => clk_count[11].CLK
+in_clk => clk_count[12].CLK
+in_clk => clk_count[13].CLK
+in_clk => clk_count[14].CLK
+in_clk => clk_count[15].CLK
+in_clk => clk_count[16].CLK
+in_clk => clk_count[17].CLK
+in_clk => clk_count[18].CLK
+in_clk => clk_count[19].CLK
+in_clk => clk_count[20].CLK
+in_clk => clk_count[21].CLK
+in_clk => clk_count[22].CLK
+in_clk => clk_count[23].CLK
+in_clk => clk_count[24].CLK
+in_clk => clk_count[25].CLK
+in_clk => slow_clk~reg0.CLK
+clear => clk_count[0].ACLR
+clear => clk_count[1].ACLR
+clear => clk_count[2].ACLR
+clear => clk_count[3].ACLR
+clear => clk_count[4].ACLR
+clear => clk_count[5].ACLR
+clear => clk_count[6].ACLR
+clear => clk_count[7].ACLR
+clear => clk_count[8].ACLR
+clear => clk_count[9].ACLR
+clear => clk_count[10].ACLR
+clear => clk_count[11].ACLR
+clear => clk_count[12].ACLR
+clear => clk_count[13].ACLR
+clear => clk_count[14].ACLR
+clear => clk_count[15].ACLR
+clear => clk_count[16].ACLR
+clear => clk_count[17].ACLR
+clear => clk_count[18].ACLR
+clear => clk_count[19].ACLR
+clear => clk_count[20].ACLR
+clear => clk_count[21].ACLR
+clear => clk_count[22].ACLR
+clear => clk_count[23].ACLR
+clear => clk_count[24].ACLR
+clear => clk_count[25].ACLR
+clear => slow_clk~reg0.ACLR
+slow_clk <= slow_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|HELLO_Counter:counter1
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+enable => count[0]~reg0.ENA
+enable => count[3]~reg0.ENA
+enable => count[2]~reg0.ENA
+enable => count[1]~reg0.ENA
+clear => count[0]~reg0.ACLR
+clear => count[1]~reg0.ACLR
+clear => count[2]~reg0.ACLR
+clear => count[3]~reg0.ACLR
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|character_encoder:encoder1
+state[0] => Decoder0.IN3
+state[1] => Decoder0.IN2
+state[2] => Decoder0.IN1
+state[3] => Decoder0.IN0
+char5[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+char5[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+char5[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+char5[3] <= <GND>
+char4[0] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+char4[1] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+char4[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+char4[3] <= <GND>
+char3[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+char3[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+char3[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+char3[3] <= <GND>
+char2[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+char2[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+char2[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+char2[3] <= <GND>
+char1[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+char1[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+char1[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+char1[3] <= <GND>
+char0[0] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+char0[1] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+char0[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+char0[3] <= <GND>
+
+
+|main|seven_segment_display:display5
+character[0] => Decoder0.IN3
+character[1] => Decoder0.IN2
+character[2] => Decoder0.IN1
+character[3] => Decoder0.IN0
+seg_display[0] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+
+|main|seven_segment_display:display4
+character[0] => Decoder0.IN3
+character[1] => Decoder0.IN2
+character[2] => Decoder0.IN1
+character[3] => Decoder0.IN0
+seg_display[0] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+
+|main|seven_segment_display:display3
+character[0] => Decoder0.IN3
+character[1] => Decoder0.IN2
+character[2] => Decoder0.IN1
+character[3] => Decoder0.IN0
+seg_display[0] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+
+|main|seven_segment_display:display2
+character[0] => Decoder0.IN3
+character[1] => Decoder0.IN2
+character[2] => Decoder0.IN1
+character[3] => Decoder0.IN0
+seg_display[0] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+
+|main|seven_segment_display:display1
+character[0] => Decoder0.IN3
+character[1] => Decoder0.IN2
+character[2] => Decoder0.IN1
+character[3] => Decoder0.IN0
+seg_display[0] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+
+|main|seven_segment_display:display0
+character[0] => Decoder0.IN3
+character[1] => Decoder0.IN2
+character[2] => Decoder0.IN1
+character[3] => Decoder0.IN0
+seg_display[0] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[1] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[2] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[6] <= seg_display.DB_MAX_OUTPUT_PORT_TYPE
+seg_display[7] <= <VCC>
+
+

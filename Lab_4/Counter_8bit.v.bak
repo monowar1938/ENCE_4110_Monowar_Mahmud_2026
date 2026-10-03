@@ -1,0 +1,6 @@
+module Counter_8bit(
+
+
+);
+
+endmodule

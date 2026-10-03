@@ -1,0 +1,6 @@
+module Counter_8_bit_part_2(
+	input T,
+	input clk,
+	input clear,
+	output Qt
+);

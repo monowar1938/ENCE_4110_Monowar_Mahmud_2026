@@ -1,0 +1,38 @@
+module add_sub_accumulator #(
+    parameter N = 4
+)(
+    input                  Clock,
+    input                  Reset,       // Active-low reset
+    input signed [N-1:0]   A,
+    input                  add_sub,
+    output signed [N-1:0]  S,
+    output                 Overflow
+);
+
+    wire signed [N-1:0] A_modified;
+    reg                 add_sub_delayed;
+
+    // add_sub = 0: pass A
+    // add_sub = 1: invert every bit of A
+    assign A_modified = A ^ {N{add_sub}};
+
+    // Align carry-in with the A register inside the accumulator.
+    always @(posedge Clock or negedge Reset) begin
+        if (!Reset)
+            add_sub_delayed <= 1'b0;
+        else
+            add_sub_delayed <= add_sub;
+    end
+
+    accumulator #(
+        .N(N)
+    ) accumulator_inst (
+        .Clock(Clock),
+        .Reset(Reset),
+        .A(A_modified),
+        .Cin(add_sub_delayed),
+        .S(S),
+        .Overflow(Overflow)
+    );
+
+endmodule

@@ -1,0 +1,41 @@
+module word_detector(
+	input 				clk,
+	input 				reset,
+	input 	[7:0] 	letter,
+	input 				data_ready,
+	input 				counter_done,
+	output 	[7:0] 	letter_out,
+	output 				start_counter,
+	output				stop_counter;
+);
+	
+	reg [7:0] state, next_state;
+
+	// States
+	localparam [2:0] A = 3'b000, B = 3'b001; 
+
+	// 1. State Register (sequential)
+	always @(posedge clk) begin
+		if(reset)
+			state <= A;
+		else
+			state <= next_state;
+	end
+	
+	// 2. Next-State Logic (combinational)
+	always @(*) begin
+		
+		next_state = A; // default
+	
+		case(state)
+			A: next_state = 8'd68 | 8'd48 ? B : A;
+			B: next_state = w ? E : A;
+			C: next_state = w ? D : A;
+			D: next_state = w ? E : A;
+			E: next_state = w ? F : A;
+			F: next_state = w ? F : A;
+		endcase
+	end
+	
+
+endmodule

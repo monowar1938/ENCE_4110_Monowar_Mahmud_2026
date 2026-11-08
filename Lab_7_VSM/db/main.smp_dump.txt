@@ -1,0 +1,21 @@
+
+State Machine - |main|VSM_UART_Interface:UART_Interface|tx_state
+Name tx_state.TX_IDLE tx_state.TX_WAIT tx_state.TX_START 
+tx_state.TX_IDLE 0 0 0 
+tx_state.TX_START 1 0 1 
+tx_state.TX_WAIT 1 1 0 
+
+State Machine - |main|VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|state
+Name state.STOP state.DATA state.START state.IDLE 
+state.IDLE 0 0 0 0 
+state.START 0 0 1 1 
+state.DATA 0 1 0 1 
+state.STOP 1 0 0 1 
+
+State Machine - |main|FSM_MicroInstr:Controller|state
+Name state.PHASE_3 state.PHASE_2 state.PHASE_1 state.IDLE state.PHASE_4 
+state.IDLE 0 0 0 0 0 
+state.PHASE_1 0 0 1 1 0 
+state.PHASE_2 0 1 0 1 0 
+state.PHASE_3 1 0 0 1 0 
+state.PHASE_4 0 0 0 1 1 

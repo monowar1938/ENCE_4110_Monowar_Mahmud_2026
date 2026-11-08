@@ -1,0 +1,742 @@
+Analysis & Synthesis report for main
+Fri Nov  6 13:54:59 2026
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |main|VSM_UART_Interface:UART_Interface|tx_state
+  9. State Machine - |main|VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|state
+ 10. State Machine - |main|FSM_MicroInstr:Controller|state
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: Accumulator_A:AccA
+ 17. Parameter Settings for User Entity Instance: Accumulator_B:AccB
+ 18. Parameter Settings for User Entity Instance: Arithmetic_Unit:ALU
+ 19. Parameter Settings for User Entity Instance: InRegister:InReg
+ 20. Parameter Settings for User Entity Instance: OutRegister:OutReg
+ 21. Parameter Settings for User Entity Instance: InstructionReg:InstrReg
+ 22. Parameter Settings for User Entity Instance: ProgramCounter:ProgCounter
+ 23. Parameter Settings for User Entity Instance: ROM_Nx8:ROM
+ 24. Parameter Settings for User Entity Instance: FSM_MicroInstr:Controller
+ 25. Parameter Settings for User Entity Instance: VSM_UART_Interface:UART_Interface|async_receiver:UART_RX
+ 26. Parameter Settings for User Entity Instance: VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX
+ 27. Parameter Settings for User Entity Instance: VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX|BaudTickGen:tickgen
+ 28. Port Connectivity Checks: "VSM_UART_Interface:UART_Interface|async_receiver:UART_RX"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+ 32. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov  6 13:54:59 2026           ;
+; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
+; Revision Name                      ; main                                            ;
+; Top-level Entity Name              ; main                                            ;
+; Family                             ; MAX 10                                          ;
+; Total logic elements               ; 267                                             ;
+;     Total combinational functions  ; 248                                             ;
+;     Dedicated logic registers      ; 138                                             ;
+; Total registers                    ; 138                                             ;
+; Total pins                         ; 99                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
+; UFM blocks                         ; 0                                               ;
+; ADC blocks                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; main               ; main               ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-10        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v               ;         ;
+; Arithmetic_Unit.v                ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/Arithmetic_Unit.v    ;         ;
+; InRegister.v                     ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/InRegister.v         ;         ;
+; OutRegister.v                    ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/OutRegister.v        ;         ;
+; InstructionReg.v                 ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/InstructionReg.v     ;         ;
+; FSM_MicroInstr.v                 ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/FSM_MicroInstr.v     ;         ;
+; ROM_Nx8.v                        ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/ROM_Nx8.v            ;         ;
+; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/ProgramCounter.v     ;         ;
+; VSM_UART_Interface.v             ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/VSM_UART_Interface.v ;         ;
+; async_receiver.v                 ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/async_receiver.v     ;         ;
+; BaudTickGen.v                    ; yes             ; User Verilog HDL File        ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/BaudTickGen.v        ;         ;
+; counter_1hz.v                    ; yes             ; Auto-Found Verilog HDL File  ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/counter_1hz.v        ;         ;
+; accumulator_a.v                  ; yes             ; Auto-Found Verilog HDL File  ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/accumulator_a.v      ;         ;
+; seg7decoder.v                    ; yes             ; Auto-Found Verilog HDL File  ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/seg7decoder.v        ;         ;
+; accumulator_b.v                  ; yes             ; Auto-Found Verilog HDL File  ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/accumulator_b.v      ;         ;
+; async_transmitter.v              ; yes             ; Auto-Found Verilog HDL File  ; D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/async_transmitter.v  ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 267                 ;
+;                                             ;                     ;
+; Total combinational functions               ; 248                 ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 115                 ;
+;     -- 3 input functions                    ; 52                  ;
+;     -- <=2 input functions                  ; 81                  ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 192                 ;
+;     -- arithmetic mode                      ; 56                  ;
+;                                             ;                     ;
+; Total registers                             ; 138                 ;
+;     -- Dedicated logic registers            ; 138                 ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 99                  ;
+;                                             ;                     ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; MAX10_CLK1_50~input ;
+; Maximum fan-out                             ; 110                 ;
+; Total fan-out                               ; 1359                ;
+; Average fan-out                             ; 2.19                ;
++---------------------------------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                   ; Entity Name        ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+--------------------+--------------+
+; |main                                  ; 248 (17)            ; 138 (1)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 99   ; 0            ; 0          ; |main                                                                                 ; main               ; work         ;
+;    |Accumulator_A:AccA|                ; 2 (2)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Accumulator_A:AccA                                                              ; Accumulator_A      ; work         ;
+;    |Accumulator_B:AccB|                ; 1 (1)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Accumulator_B:AccB                                                              ; Accumulator_B      ; work         ;
+;    |Arithmetic_Unit:ALU|               ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Arithmetic_Unit:ALU                                                             ; Arithmetic_Unit    ; work         ;
+;    |Counter_1Hz:divider|               ; 39 (39)             ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_1Hz:divider                                                             ; Counter_1Hz        ; work         ;
+;    |FSM_MicroInstr:Controller|         ; 7 (7)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|FSM_MicroInstr:Controller                                                       ; FSM_MicroInstr     ; work         ;
+;    |InstructionReg:InstrReg|           ; 6 (6)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|InstructionReg:InstrReg                                                         ; InstructionReg     ; work         ;
+;    |OutRegister:OutReg|                ; 6 (6)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|OutRegister:OutReg                                                              ; OutRegister        ; work         ;
+;    |ProgramCounter:ProgCounter|        ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ProgramCounter:ProgCounter                                                      ; ProgramCounter     ; work         ;
+;    |ROM_Nx8:ROM|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_Nx8:ROM                                                                     ; ROM_Nx8            ; work         ;
+;    |VSM_UART_Interface:UART_Interface| ; 118 (26)            ; 80 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|VSM_UART_Interface:UART_Interface                                               ; VSM_UART_Interface ; work         ;
+;       |async_receiver:UART_RX|         ; 53 (53)             ; 35 (35)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|VSM_UART_Interface:UART_Interface|async_receiver:UART_RX                        ; async_receiver     ; work         ;
+;       |async_transmitter:UART_TX|      ; 39 (22)             ; 28 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX                     ; async_transmitter  ; work         ;
+;          |BaudTickGen:tickgen|         ; 17 (17)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX|BaudTickGen:tickgen ; BaudTickGen        ; work         ;
+;    |seg7Decoder:SEG0|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG0                                                                ; seg7Decoder        ; work         ;
+;    |seg7Decoder:SEG1|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG1                                                                ; seg7Decoder        ; work         ;
+;    |seg7Decoder:SEG2|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG2                                                                ; seg7Decoder        ; work         ;
+;    |seg7Decoder:SEG4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG4                                                                ; seg7Decoder        ; work         ;
+;    |seg7Decoder:SEG5|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG5                                                                ; seg7Decoder        ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |main|VSM_UART_Interface:UART_Interface|tx_state            ;
++-------------------+------------------+------------------+-------------------+
+; Name              ; tx_state.TX_IDLE ; tx_state.TX_WAIT ; tx_state.TX_START ;
++-------------------+------------------+------------------+-------------------+
+; tx_state.TX_IDLE  ; 0                ; 0                ; 0                 ;
+; tx_state.TX_START ; 1                ; 0                ; 1                 ;
+; tx_state.TX_WAIT  ; 1                ; 1                ; 0                 ;
++-------------------+------------------+------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------+
+; State Machine - |main|VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|state ;
++-------------+------------+------------+-------------+--------------------------------+
+; Name        ; state.STOP ; state.DATA ; state.START ; state.IDLE                     ;
++-------------+------------+------------+-------------+--------------------------------+
+; state.IDLE  ; 0          ; 0          ; 0           ; 0                              ;
+; state.START ; 0          ; 0          ; 1           ; 1                              ;
+; state.DATA  ; 0          ; 1          ; 0           ; 1                              ;
+; state.STOP  ; 1          ; 0          ; 0           ; 1                              ;
++-------------+------------+------------+-------------+--------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------+
+; State Machine - |main|FSM_MicroInstr:Controller|state                                      ;
++---------------+---------------+---------------+---------------+------------+---------------+
+; Name          ; state.PHASE_3 ; state.PHASE_2 ; state.PHASE_1 ; state.IDLE ; state.PHASE_4 ;
++---------------+---------------+---------------+---------------+------------+---------------+
+; state.IDLE    ; 0             ; 0             ; 0             ; 0          ; 0             ;
+; state.PHASE_1 ; 0             ; 0             ; 1             ; 1          ; 0             ;
+; state.PHASE_2 ; 0             ; 1             ; 0             ; 1          ; 0             ;
+; state.PHASE_3 ; 1             ; 0             ; 0             ; 1          ; 0             ;
+; state.PHASE_4 ; 0             ; 0             ; 0             ; 1          ; 1             ;
++---------------+---------------+---------------+---------------+------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                  ;
++--------------------------------------------------------------------------+----------------------------------------------------------+
+; Register name                                                            ; Reason for Removal                                       ;
++--------------------------------------------------------------------------+----------------------------------------------------------+
+; VSM_UART_Interface:UART_Interface|tx_data[7]                             ; Stuck at GND due to stuck port data_in                   ;
+; VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX|TxD_shift[7] ; Stuck at GND due to stuck port data_in                   ;
+; InstructionReg:InstrReg|ToInstr[3]                                       ; Stuck at GND due to stuck port data_in                   ;
+; VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|state~6         ; Lost fanout                                              ;
+; VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|state~7         ; Lost fanout                                              ;
+; FSM_MicroInstr:Controller|state~2                                        ; Lost fanout                                              ;
+; FSM_MicroInstr:Controller|state~3                                        ; Lost fanout                                              ;
+; VSM_UART_Interface:UART_Interface|tx_data[6]                             ; Merged with VSM_UART_Interface:UART_Interface|tx_data[5] ;
+; Total Number of Removed Registers = 8                                    ;                                                          ;
++--------------------------------------------------------------------------+----------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                         ;
++----------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; Register name                                ; Reason for Removal        ; Registers Removed due to This Register                                   ;
++----------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; VSM_UART_Interface:UART_Interface|tx_data[7] ; Stuck at GND              ; VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX|TxD_shift[7] ;
+;                                              ; due to stuck port data_in ;                                                                          ;
++----------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 138   ;
+; Number of registers using Synchronous Clear  ; 56    ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 47    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------+
+; Inverted Register Statistics                                                ;
++-------------------------------------------------------------------+---------+
+; Inverted Register                                                 ; Fan out ;
++-------------------------------------------------------------------+---------+
+; VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|rx_sync2 ; 13      ;
+; VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|rx_sync1 ; 1       ;
+; VSM_UART_Interface:UART_Interface|tx_data[4]                      ; 1       ;
+; VSM_UART_Interface:UART_Interface|tx_data[5]                      ; 2       ;
+; Total number of inverted registers = 4                            ;         ;
++-------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |main|InstructionReg:InstrReg|DataReg[2]                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|ProgramCounter:ProgCounter|Counter[0]                                    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|OutRegister:OutReg|rOut[1]                                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|Accumulator_A:AccA|AluA[3]                                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|Accumulator_B:AccB|AluB[3]                                               ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|Counter_1Hz:divider|clk_count[15]                                        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX|TxD_shift[1] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|VSM_UART_Interface:UART_Interface|tx_data[1]                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |main|VSM_UART_Interface:UART_Interface|uart_input[3]                          ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |main|InstructionReg:InstrReg|ToInstr[0]                                       ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |main|VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|clk_count[5]    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|bit_index       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|w_IB_BUS[3]                                                              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |main|VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|Selector13      ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |main|VSM_UART_Interface:UART_Interface|async_receiver:UART_RX|Selector12      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Accumulator_A:AccA ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; N              ; 4     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Accumulator_B:AccB ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; N              ; 4     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Arithmetic_Unit:ALU ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InRegister:InReg ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; N              ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: OutRegister:OutReg ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; N              ; 4     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InstructionReg:InstrReg ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ProgramCounter:ProgCounter ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM_Nx8:ROM ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; N              ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FSM_MicroInstr:Controller ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 4     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VSM_UART_Interface:UART_Interface|async_receiver:UART_RX ;
++----------------+----------+---------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                      ;
++----------------+----------+---------------------------------------------------------------------------+
+; ClkFrequency   ; 50000000 ; Signed Integer                                                            ;
+; Baud           ; 115200   ; Signed Integer                                                            ;
+; Oversampling   ; 8        ; Signed Integer                                                            ;
++----------------+----------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX ;
++----------------+----------+------------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                         ;
++----------------+----------+------------------------------------------------------------------------------+
+; ClkFrequency   ; 50000000 ; Signed Integer                                                               ;
+; Baud           ; 115200   ; Signed Integer                                                               ;
++----------------+----------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX|BaudTickGen:tickgen ;
++----------------+----------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                                             ;
++----------------+----------+--------------------------------------------------------------------------------------------------+
+; ClkFrequency   ; 50000000 ; Signed Integer                                                                                   ;
+; Baud           ; 115200   ; Signed Integer                                                                                   ;
+; Oversampling   ; 1        ; Signed Integer                                                                                   ;
++----------------+----------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VSM_UART_Interface:UART_Interface|async_receiver:UART_RX"                                      ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; RxD_idle        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; RxD_endofpacket ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 99                          ;
+; cycloneiii_ff         ; 138                         ;
+;     ENA               ; 30                          ;
+;     ENA SCLR          ; 17                          ;
+;     SCLR              ; 39                          ;
+;     SLD               ; 17                          ;
+;     plain             ; 35                          ;
+; cycloneiii_io_obuf    ; 36                          ;
+; cycloneiii_lcell_comb ; 254                         ;
+;     arith             ; 56                          ;
+;         2 data inputs ; 51                          ;
+;         3 data inputs ; 5                           ;
+;     normal            ; 198                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 47                          ;
+;         4 data inputs ; 115                         ;
+;                       ;                             ;
+; Max LUT depth         ; 7.30                        ;
+; Average LUT depth     ; 2.77                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Fri Nov  6 13:54:45 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file main.v
+    Info (12023): Found entity 1: main File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 4
+Warning (12019): Can't analyze file -- file output_files/encoder_reader.v is missing
+Warning (12019): Can't analyze file -- file rotary_encoder_1x.v is missing
+Warning (12019): Can't analyze file -- file Acculumator_A.v is missing
+Warning (12019): Can't analyze file -- file Acculumator_B.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file arithmetic_unit.v
+    Info (12023): Found entity 1: Arithmetic_Unit File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/Arithmetic_Unit.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file inregister.v
+    Info (12023): Found entity 1: InRegister File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/InRegister.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file outregister.v
+    Info (12023): Found entity 1: OutRegister File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/OutRegister.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file instructionreg.v
+    Info (12023): Found entity 1: InstructionReg File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/InstructionReg.v Line: 4
+Warning (12019): Can't analyze file -- file output_files/main.v is missing
+Warning (12019): Can't analyze file -- file Memory_Nx8.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_microinstr.v
+    Info (12023): Found entity 1: FSM_MicroInstr File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/FSM_MicroInstr.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file rom_nx8.v
+    Info (12023): Found entity 1: ROM_Nx8 File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/ROM_Nx8.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file programcounter.v
+    Info (12023): Found entity 1: ProgramCounter File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/ProgramCounter.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file vsm_uart_interface.v
+    Info (12023): Found entity 1: VSM_UART_Interface File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/VSM_UART_Interface.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file async_receiver.v
+    Info (12023): Found entity 1: async_receiver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/async_receiver.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file baudtickgen.v
+    Info (12023): Found entity 1: BaudTickGen File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/BaudTickGen.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file assertion_error.v
+    Info (12023): Found entity 1: ASSERTION_ERROR File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/ASSERTION_ERROR.v Line: 2
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (12125): Using design file counter_1hz.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Counter_1Hz File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/counter_1hz.v Line: 2
+Info (12128): Elaborating entity "Counter_1Hz" for hierarchy "Counter_1Hz:divider" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 31
+Warning (12125): Using design file accumulator_a.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Accumulator_A File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/accumulator_a.v Line: 4
+Info (12128): Elaborating entity "Accumulator_A" for hierarchy "Accumulator_A:AccA" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 113
+Warning (12125): Using design file seg7decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: seg7Decoder File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/seg7decoder.v Line: 4
+Info (12128): Elaborating entity "seg7Decoder" for hierarchy "seg7Decoder:SEG1" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 118
+Warning (12125): Using design file accumulator_b.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Accumulator_B File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/accumulator_b.v Line: 4
+Info (12128): Elaborating entity "Accumulator_B" for hierarchy "Accumulator_B:AccB" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 130
+Info (12128): Elaborating entity "Arithmetic_Unit" for hierarchy "Arithmetic_Unit:ALU" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 148
+Info (12128): Elaborating entity "InRegister" for hierarchy "InRegister:InReg" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 163
+Info (12128): Elaborating entity "OutRegister" for hierarchy "OutRegister:OutReg" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 180
+Info (12128): Elaborating entity "InstructionReg" for hierarchy "InstructionReg:InstrReg" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 200
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:ProgCounter" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 211
+Info (12128): Elaborating entity "ROM_Nx8" for hierarchy "ROM_Nx8:ROM" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 222
+Warning (10030): Net "rom.data_a" at ROM_Nx8.v(13) has no driver or initial value, using a default initial value '0' File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/ROM_Nx8.v Line: 13
+Warning (10030): Net "rom.waddr_a" at ROM_Nx8.v(13) has no driver or initial value, using a default initial value '0' File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/ROM_Nx8.v Line: 13
+Warning (10030): Net "rom.we_a" at ROM_Nx8.v(13) has no driver or initial value, using a default initial value '0' File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/ROM_Nx8.v Line: 13
+Info (12128): Elaborating entity "FSM_MicroInstr" for hierarchy "FSM_MicroInstr:Controller" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 245
+Warning (10270): Verilog HDL Case Statement warning at FSM_MicroInstr.v(127): incomplete case statement has no default case item File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/FSM_MicroInstr.v Line: 127
+Warning (10270): Verilog HDL Case Statement warning at FSM_MicroInstr.v(172): incomplete case statement has no default case item File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/FSM_MicroInstr.v Line: 172
+Info (12128): Elaborating entity "VSM_UART_Interface" for hierarchy "VSM_UART_Interface:UART_Interface" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 259
+Info (12128): Elaborating entity "async_receiver" for hierarchy "VSM_UART_Interface:UART_Interface|async_receiver:UART_RX" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/VSM_UART_Interface.v Line: 35
+Warning (12125): Using design file async_transmitter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: async_transmitter File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/async_transmitter.v Line: 2
+Info (12128): Elaborating entity "async_transmitter" for hierarchy "VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/VSM_UART_Interface.v Line: 78
+Info (12128): Elaborating entity "BaudTickGen" for hierarchy "VSM_UART_Interface:UART_Interface|async_transmitter:UART_TX|BaudTickGen:tickgen" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/async_transmitter.v Line: 31
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "w_IB_BUS[3]" into a selector File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/accumulator_a.v Line: 16
+    Warning (13048): Converted tri-state node "w_IB_BUS[2]" into a selector File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/accumulator_a.v Line: 16
+    Warning (13048): Converted tri-state node "w_IB_BUS[1]" into a selector File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/accumulator_a.v Line: 16
+    Warning (13048): Converted tri-state node "w_IB_BUS[0]" into a selector File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/accumulator_a.v Line: 16
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276013): RAM logic "ROM_Nx8:ROM|rom" is uninferred because MIF is not supported for the selected family File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/ROM_Nx8.v Line: 13
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[35]" and its non-tri-state driver. File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "GPIO[33]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[1]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[3]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[8]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[9]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[10]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[11]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[13]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[14]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[16]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "GPIO[35]~synth" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 8
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 10
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 11
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 12
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 13
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+Info (144001): Generated suppressed messages file D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/output_files/main.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 6
+    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 7
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 7
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 7
+    Warning (15610): No output dependent on input pin "SW[9]" File: D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/main.v Line: 7
+Info (21057): Implemented 372 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 50 output pins
+    Info (21060): Implemented 36 bidirectional pins
+    Info (21061): Implemented 273 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 100 warnings
+    Info: Peak virtual memory: 4863 megabytes
+    Info: Processing ended: Fri Nov  6 13:54:59 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:30
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Study/PhD_DU/Q1/ENCE4110/Lab/Quartus/Lab_7_VSM_Template/output_files/main.map.smsg.
+
+
